@@ -1,0 +1,1 @@
+var ctxPath="http://localhost:8080"
