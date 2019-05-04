@@ -101,8 +101,8 @@ public class UserController {
 		System.out.println(user.getFirstName());
 		System.out.println(user);
 		if (userService.saveUser(user))
-			return new ResponseEntity<>("Success.", HttpStatus.OK);
-		return new ResponseEntity<>("Error!", HttpStatus.BAD_REQUEST);
+			return ResponseEntity.ok().header("Access-Control-Allow-Origin", "*").body("Success.");
+		return ResponseEntity.ok().header("Access-Control-Allow-Origin", "*").body("Error!");
 	}
 	
 	//need to send id along with the object
